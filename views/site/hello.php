@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-<h2><?= $message ?? ''; ?></h2>
+<h2><?= $message ?? 'huy tebe'; ?></h2>
+<h2>ebanat</h2>
 </body>
 </html>
