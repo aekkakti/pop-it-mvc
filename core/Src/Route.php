@@ -26,10 +26,6 @@ class Route
     {
         $path = explode('?', $_SERVER['REQUEST_URI'])[0];
         $path = substr($path, strlen(self::$prefix) + 1);
-        echo '<pre>';
-        print_r(self::$routes);
-        echo '</pre>';
-        var_dump($path);
         if (!array_key_exists($path, self::$routes)) {
             throw new Error('This path does not exist');
         }
@@ -46,5 +42,20 @@ class Route
         }
 
         call_user_func([new $class, $action], new Request());
+    }
+
+    public function redirect(string $url): void
+    {
+        header('Location: ' . $this->getUrl($url));
+    }
+
+    public function getUrl(string $url): string
+    {
+        return self::$prefix . $url;
+    }
+
+    public function __construct(string $prefix = '')
+    {
+        self::setPrefix($prefix);
     }
 }
