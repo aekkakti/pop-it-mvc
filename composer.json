@@ -1,0 +1,14 @@
+{
+    "name": "aekkakti/practice-server",
+    "description": "Practice server",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "aekkakti",
+            "email": "music.tomsk1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
