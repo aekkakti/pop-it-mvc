@@ -34,7 +34,7 @@ class View
 
     private function getPathToView(string $view = ''): string
     {
-        $view = str_replace('.'. '/', $view);
+        $view = str_replace('.', '/', $view);
         return $this->getRoot() . "/$view.php";
     }
 
