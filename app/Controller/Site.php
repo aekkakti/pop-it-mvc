@@ -21,7 +21,8 @@ class Site
         return (new View())->render('site.hello',['message' => 'welcome to site!']);
     }
 
-    public function signup(Request $request): View|string
+
+public function signup(Request $request): View|string
     {
         if ($request->method==='POST') {
             $validator = new Validator ($request->all(), [
@@ -51,6 +52,10 @@ class Site
         }
         if (Auth::attempt($request->all())) {
             app()->route->redirect('/hello');
+        }
+        if (User::create($request->all())) {
+            app()->route->redirect('/login');
+            return false;
         }
         return new View('site.login', ['message' => 'Неправильные логин или пароль']);
     }
