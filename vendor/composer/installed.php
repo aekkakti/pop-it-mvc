@@ -3,7 +3,7 @@
         'name' => 'aekkakti/practice-server',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '3845f7ddb4926a48f0b122ad0a7a971c48c887e6',
+        'reference' => '3d202678e443694283723b9a62bc95eb5bfe4300',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'aekkakti/practice-server' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '3845f7ddb4926a48f0b122ad0a7a971c48c887e6',
+            'reference' => '3d202678e443694283723b9a62bc95eb5bfe4300',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
