@@ -3,7 +3,7 @@
         'name' => 'aekkakti/practice-server',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '631165378a9c1275e7b710890e3ab9e4ee8573f3',
+        'reference' => '3845f7ddb4926a48f0b122ad0a7a971c48c887e6',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'aekkakti/practice-server' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '631165378a9c1275e7b710890e3ab9e4ee8573f3',
+            'reference' => '3845f7ddb4926a48f0b122ad0a7a971c48c887e6',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -143,6 +143,17 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../nesbot/carbon',
             'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'nikic/fast-route' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '0e4448becf138690c6cbdc521175b07c2412c238',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../nikic/fast-route',
+            'aliases' => array(
+                0 => '2.0.x-dev',
+            ),
             'dev_requirement' => false,
         ),
         'psr/clock' => array(
