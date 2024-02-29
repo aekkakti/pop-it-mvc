@@ -38,7 +38,7 @@ class Application {
         }
     }
 
-    private function dbRun()
+    private function dbRun(): void
     {
         $this->dbManager->addConnection($this->settings->getDbSetting());
         $this->dbManager->setEventDispatcher(new Dispatcher(new Container));

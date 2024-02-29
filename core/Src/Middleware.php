@@ -46,7 +46,7 @@ class Middleware
 
         foreach ($this->getMiddlewaresForRoute($httpMethod, $uri) as $middleware) {
             $args = explode(':', $middleware);
-            $request = (new $routeMiddleware[$args[0]])->handle($request, $args[1]?? null) ?? $request;
+            $request = (new $routeMiddleware[$args[0]])->handle($request, $args[1] ?? null) ?? $request;
         }
         return $request;
     }

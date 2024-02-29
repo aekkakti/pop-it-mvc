@@ -21,7 +21,7 @@ class Site
         return (new View())->render('site.hello',['message' => 'welcome to site!']);
     }
 
-    public function signup(Request $request): string
+    public function signup(Request $request): View|string
     {
         if ($request->method==='POST') {
             $validator = new Validator ($request->all(), [
