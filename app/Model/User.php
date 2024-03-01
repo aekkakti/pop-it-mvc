@@ -12,6 +12,7 @@ class User extends Model implements IdentityInterface
 
     public $timestamps = false;
     protected $fillable = [
+        'csrf_token',
         'auth_token',
         'name',
         'login',
