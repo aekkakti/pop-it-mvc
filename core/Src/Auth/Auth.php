@@ -22,13 +22,14 @@ class Auth
         Session::set('id', self::$user->getId());
     }
 
-    public static function attempt(array $credentials): bool
+    public static function attempt(array $credentials): array
     {
         if ($user = self::$user->attemptIdentity($credentials)) {
             self::login($user);
-            return true;
+            $authToken = self::generateAuthToken();
+            return ['auth_token' => $authToken];
         }
-        return false;
+        return [];
     }
 
     public static function user()
@@ -58,4 +59,10 @@ class Auth
         return $token;
     }
 
+    public static function generateAuthToken(): string
+    {
+        $token = uniqid();
+        Session::set('auth_token', $token);
+        return $token;
+    }
 }

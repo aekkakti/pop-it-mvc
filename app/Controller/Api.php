@@ -3,16 +3,19 @@
 namespace Controller;
 
 use Model\Post;
+use Model\User;
+use Src\Auth\Auth;
 use Src\Request;
 use Src\View;
 
 class Api
 {
-    public function index(): void
+    public function index(Request $request): void
     {
-        $posts = Post::all()->toArray();
+        $csrfToken = $request->get('csrf_token');
 
-        (new View())->toJSON($posts);
+        (new View())->toJSON($csrfToken);
+
     }
 
     public function echo(Request $request): void
